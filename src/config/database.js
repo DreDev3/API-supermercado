@@ -2,7 +2,7 @@ const { underscoredIf } = require('sequelize/lib/utils');
 
 require('dotenv').config();
 module.exports = {
-    dialect: 'mysql',
+    dialect: 'mariadb',
     host: process.env.DATABASE_HOST,
     port: process.env.DATABASE_PORT,
     username:process.env.DATABASE_USERNAME,

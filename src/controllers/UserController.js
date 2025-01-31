@@ -9,7 +9,7 @@ class UserController {
       return res.json({ id, nome, email, typerUser });
     } catch (err) {
       return res.status(400).json({
-        errors: err.errors.map(err => err.message),
+        errors: err.errors ? err.errors.map(err => err.message) : ["Erro inesperado"],
       })
     }
   }

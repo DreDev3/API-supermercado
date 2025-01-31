@@ -4,7 +4,7 @@ import Foto from '../models/Foto';
 class ProdutoController {
   async index(req, res) {
     const produto = await Produto.findAll({
-      attributes: ['id', 'nome', 'descricao', 'categoria', 'preco', 'active'],
+      attributes: ['id', 'nome', 'descricao', 'categoria', 'quantidade', 'preco', 'active'],
       order: [['id', 'DESC'], [Foto, 'id', 'DESC']],
       include: {
         model: Foto,
@@ -21,7 +21,7 @@ class ProdutoController {
       return res.json(produto);
     } catch (err) {
       return res.status(400).json({
-        errors: err.errors.map((err) => err.message),
+        errors: err.errors ? err.errors.map((error) => error.message) : ['Erro inesperado ao processar a requisição.'],
       });
 
     }
@@ -37,7 +37,7 @@ class ProdutoController {
       };
 
       const produto = await Produto.findByPk(id, {
-        attributes: ['id', 'nome', 'descricao', 'categoria', 'preco'],
+        attributes: ['id', 'nome', 'descricao', 'categoria', 'quantidade', 'preco', 'active'],
         order: [['id', 'DESC'], [Foto, 'id', 'DESC']],
         include: {
           model: Foto,

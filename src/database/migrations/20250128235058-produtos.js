@@ -20,6 +20,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
        },
+       quantidade: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+       },
        preco: {
         type: Sequelize.FLOAT,
         allowNull: false,

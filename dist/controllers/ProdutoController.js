@@ -4,7 +4,7 @@ var _Foto = require('../models/Foto'); var _Foto2 = _interopRequireDefault(_Foto
 class ProdutoController {
   async index(req, res) {
     const produto = await _Produto2.default.findAll({
-      attributes: ['id', 'nome', 'descricao', 'categoria', 'preco', 'active'],
+      attributes: ['id', 'nome', 'descricao', 'categoria', 'quantidade', 'preco', 'active'],
       order: [['id', 'DESC'], [_Foto2.default, 'id', 'DESC']],
       include: {
         model: _Foto2.default,
@@ -21,7 +21,7 @@ class ProdutoController {
       return res.json(produto);
     } catch (err) {
       return res.status(400).json({
-        errors: err.errors.map((err) => err.message),
+        errors: err.errors ? err.errors.map((error) => error.message) : ['Erro inesperado ao processar a requisição.'],
       });
 
     }
@@ -37,7 +37,7 @@ class ProdutoController {
       };
 
       const produto = await _Produto2.default.findByPk(id, {
-        attributes: ['id', 'nome', 'descricao', 'categoria', 'preco'],
+        attributes: ['id', 'nome', 'descricao', 'categoria', 'quantidade', 'preco', 'active'],
         order: [['id', 'DESC'], [_Foto2.default, 'id', 'DESC']],
         include: {
           model: _Foto2.default,

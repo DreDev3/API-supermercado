@@ -4,7 +4,7 @@ var _HomeController = require('../controllers/HomeController'); var _HomeControl
 const router = new (0, _express.Router)();
 
 //rota de teste
-const { testDatabaseConnection } = require('./controllers/HomeController'); // Caminho correto do seu controlador
+const { testDatabaseConnection } = require('../controllers/HomeController'); // Caminho correto do seu controlador
 //
 
 router.get('/', _HomeController2.default.index)

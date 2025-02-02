@@ -16,7 +16,7 @@ import cartRoutes from './routes/cartRoutes'
 
 const whiteList = [
   'http://192.168.1.8',
-  'http://localhost:3000'
+  'https://api-supermercado-zjb6.onrender.com/'
 ]
 
 const corsOptions = {

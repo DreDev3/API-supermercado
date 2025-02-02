@@ -42,6 +42,10 @@
                     }
                 }
             },
+            quantidade: {
+                type: _sequelize2.default.INTEGER,
+                defaultValue: 1,
+            },
             active: _sequelize2.default.BOOLEAN,
         }, 
         {

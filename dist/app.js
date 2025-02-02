@@ -16,7 +16,7 @@ var _cartRoutes = require('./routes/cartRoutes'); var _cartRoutes2 = _interopReq
 
 const whiteList = [
   'http://192.168.1.8',
-  'http://localhost:3000'
+  'https://api-supermercado-zjb6.onrender.com/'
 ]
 
 const corsOptions = {

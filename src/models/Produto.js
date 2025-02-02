@@ -42,6 +42,10 @@ export default class Produto extends Model {
                     }
                 }
             },
+            quantidade: {
+                type: Sequelize.INTEGER,
+                defaultValue: 1,
+            },
             active: Sequelize.BOOLEAN,
         }, 
         {

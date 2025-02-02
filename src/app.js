@@ -12,7 +12,8 @@ import userRoutes from './routes/userRoutes';
 import tokenRoutes from './routes/tokenRoutes';
 import produtoRoutes from './routes/produtoRoutes';
 import fotoRoutes from './routes/fotoRoutes';
-import cartRoutes from './routes/cartRoutes'
+import cartRoutes from './routes/cartRoutes';
+import testeDbRoutes from './routes/testeDbRoutes';
 
 const whiteList = [
   'http://192.168.1.8',
@@ -53,6 +54,7 @@ class App {
     this.app.use('/produtos/', produtoRoutes);
     this.app.use('/fotos/', fotoRoutes);
     this.app.use('/carrinho/', cartRoutes);
+    this.app.use('/db/', testeDbRoutes);
   }
 }
 

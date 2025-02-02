@@ -13,6 +13,7 @@ var _tokenRoutes = require('./routes/tokenRoutes'); var _tokenRoutes2 = _interop
 var _produtoRoutes = require('./routes/produtoRoutes'); var _produtoRoutes2 = _interopRequireDefault(_produtoRoutes);
 var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopRequireDefault(_fotoRoutes);
 var _cartRoutes = require('./routes/cartRoutes'); var _cartRoutes2 = _interopRequireDefault(_cartRoutes);
+var _testeDbRoutes = require('./routes/testeDbRoutes'); var _testeDbRoutes2 = _interopRequireDefault(_testeDbRoutes);
 
 const whiteList = [
   'http://192.168.1.8',
@@ -53,6 +54,7 @@ class App {
     this.app.use('/produtos/', _produtoRoutes2.default);
     this.app.use('/fotos/', _fotoRoutes2.default);
     this.app.use('/carrinho/', _cartRoutes2.default);
+    this.app.use('/db/', _testeDbRoutes2.default);
   }
 }
 

@@ -4,7 +4,7 @@ import homeController from '../controllers/HomeController';
 const router = new Router();
 
 //rota de teste
-const { testDatabaseConnection } = require('../controllers/HomeController'); // Caminho correto do seu controlador
+import { testDatabaseConnection } from '../controllers/HomeController'; // Caminho correto do seu controlador
 //
 
 router.get('/', homeController.index)

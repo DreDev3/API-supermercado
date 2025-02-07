@@ -15,8 +15,6 @@ var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopReq
 var _cartRoutes = require('./routes/cartRoutes'); var _cartRoutes2 = _interopRequireDefault(_cartRoutes);
 
 const whiteList = [
-  'http://192.168.1.3',
-  'http://edson.dyndns-work.com',
   'https://dredev3.github.io'
 ]
 

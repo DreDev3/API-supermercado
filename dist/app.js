@@ -16,7 +16,7 @@ var _cartRoutes = require('./routes/cartRoutes'); var _cartRoutes2 = _interopReq
 
 const whiteList = [
   'http://192.168.1.3',
-  'edson.dyndns-work.com',
+  'http://edson.dyndns-work.com',
   'https://dredev3.github.io'
 ]
 

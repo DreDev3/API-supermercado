@@ -16,7 +16,7 @@ import cartRoutes from './routes/cartRoutes';
 
 const whiteList = [
   'http://192.168.1.3',
-  'edson.dyndns-work.com',
+  'http://edson.dyndns-work.com',
   'https://dredev3.github.io'
 ]
 

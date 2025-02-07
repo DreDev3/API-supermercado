@@ -13,11 +13,11 @@ import tokenRoutes from './routes/tokenRoutes';
 import produtoRoutes from './routes/produtoRoutes';
 import fotoRoutes from './routes/fotoRoutes';
 import cartRoutes from './routes/cartRoutes';
-import testeDbRoutes from './routes/testeDbRoutes';
 
 const whiteList = [
-  'http://192.168.1.8',
-  'https://api-supermercado-zjb6.onrender.com/'
+  'http://192.168.1.3',
+  'edson.dyndns-work.com',
+  'https://dredev3.github.io'
 ]
 
 const corsOptions = {
@@ -54,7 +54,6 @@ class App {
     this.app.use('/produtos/', produtoRoutes);
     this.app.use('/fotos/', fotoRoutes);
     this.app.use('/carrinho/', cartRoutes);
-    this.app.use('/db/', testeDbRoutes);
   }
 }
 

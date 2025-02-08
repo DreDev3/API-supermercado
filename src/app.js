@@ -15,7 +15,9 @@ import fotoRoutes from './routes/fotoRoutes';
 import cartRoutes from './routes/cartRoutes';
 
 const whiteList = [
-  'https://dredev3.github.io'
+  'https://dredev3.github.io',
+  'http://localhost:3002', 
+  'http://edson.dyndns-work.com',
 ]
 
 const corsOptions = {
@@ -38,7 +40,7 @@ class App {
   middlewares() {
     this.app.use(cors(corsOptions));
     this.app.use(helmet({
-      crossOriginResourcePolicy: false, // Permite acesso CORS
+      crossOriginResourcePolicy: { policy: "cross-origin" }
     }));
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());

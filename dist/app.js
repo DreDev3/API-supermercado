@@ -15,7 +15,9 @@ var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopReq
 var _cartRoutes = require('./routes/cartRoutes'); var _cartRoutes2 = _interopRequireDefault(_cartRoutes);
 
 const whiteList = [
-  'https://dredev3.github.io'
+  'https://dredev3.github.io',
+  'http://localhost:3002', 
+  'http://edson.dyndns-work.com',
 ]
 
 const corsOptions = {
@@ -38,7 +40,7 @@ class App {
   middlewares() {
     this.app.use(_cors2.default.call(void 0, corsOptions));
     this.app.use(_helmet2.default.call(void 0, {
-      crossOriginResourcePolicy: false, // Permite acesso CORS
+      crossOriginResourcePolicy: { policy: "cross-origin" }
     }));
     this.app.use(_express2.default.urlencoded({ extended: true }));
     this.app.use(_express2.default.json());

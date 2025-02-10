@@ -2,4 +2,4 @@
 
 const port = process.env.APP_PORT
 
-_app2.default.listen(port);
+_app2.default.listen(port, '0.0.0.0');

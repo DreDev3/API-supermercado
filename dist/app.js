@@ -16,13 +16,14 @@ var _cartRoutes = require('./routes/cartRoutes'); var _cartRoutes2 = _interopReq
 
 const whiteList = [
   'https://dredev3.github.io',
-  'http://localhost:3000', 
+  'http://localhost:3000',
   'http://edson.dyndns-work.com',
+  undefined
 ]
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if(whiteList.indexOf(origin) !== -1 || !origin){
+    if (!origin || whiteList.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'))

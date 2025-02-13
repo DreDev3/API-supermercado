@@ -23,12 +23,12 @@ class TokenController {
         errors: ['Senha inválida.']
       })
     }
-    const { id } = user//seria o mesmo que fazer, const id = user.id
+    const { id, nome } = user//seria o mesmo que fazer, const id = user.id
     const token = _jsonwebtoken2.default.sign({ id, email }, process.env.TOKEN_SECRET, {
       expiresIn: process.env.TOKEN_EXPIRATION,
     });
 
-    return res.json({ token, user: { nome: user.nome, id, email } });
+    return res.json({ token },  { id, nome });
   }
 }
 
